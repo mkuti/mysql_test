@@ -1,0 +1,23 @@
+mysql> desc Employee;
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| EmployeeId | int(11)     | NO   | PRI | NULL    | auto_increment |
+| LastName   | varchar(20) | NO   |     | NULL    |                |
+| FirstName  | varchar(20) | NO   |     | NULL    |                |
+| Title      | varchar(30) | YES  |     | NULL    |                |
+| ReportsTo  | int(11)     | YES  | MUL | NULL    |                |
+| BirthDate  | datetime    | YES  |     | NULL    |                |
+| HireDate   | datetime    | YES  |     | NULL    |                |
+| Address    | varchar(70) | YES  |     | NULL    |                |
+| City       | varchar(40) | YES  |     | NULL    |                |
+| State      | varchar(40) | YES  |     | NULL    |                |
+| Country    | varchar(40) | YES  |     | NULL    |                |
+| PostalCode | varchar(10) | YES  |     | NULL    |                |
+| Phone      | varchar(24) | YES  |     | NULL    |                |
+| Fax        | varchar(24) | YES  |     | NULL    |                |
+| Email      | varchar(60) | YES  |     | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
+15 rows in set (0.01 sec)
+
+mysql> notee;
