@@ -7639,3 +7639,72 @@ mysql> select Artist.Name as Artist, count(Track.TrackId) as Track from Artist
 +--------------+-------+
 5 rows in set (0.00 sec)
 
+mysql> use Chinook;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++-------------------+
+| Tables_in_Chinook |
++-------------------+
+| Album             |
+| Artist            |
+| Customer          |
+| Employee          |
+| Friends           |
+| Genre             |
+| Invoice           |
+| InvoiceLine       |
+| MediaType         |
+| Playlist          |
+| PlaylistTrack     |
+| Track             |
++-------------------+
+12 rows in set (0.00 sec)
+
+mysql> select * from Friends;
++------+------+---------------------+
+| Name | age  | DOB                 |
++------+------+---------------------+
+| Rick |   26 | 1982-01-21 12:04:55 |
+| Eve  |   18 | 1993-06-20 09:04:55 |
++------+------+---------------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from Friends;
+Empty set (0.00 sec)
+
+mysql> select * from Friends;
++------+------+---------------------+
+| Name | age  | DOB                 |
++------+------+---------------------+
+| Mark |   25 | 1969-10-08 13:00:12 |
+| Eve  |   36 | 1969-10-08 13:00:12 |
+| Rose |   16 | 2000-12-25 12:05:05 |
++------+------+---------------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from Friends;
++------+------+---------------------+
+| Name | age  | DOB                 |
++------+------+---------------------+
+| Mark |   25 | 1969-10-08 13:00:12 |
+| Eve  |   36 | 1969-10-08 13:00:12 |
+| Rose |   16 | 2000-12-25 12:05:05 |
+| Jack |   33 | 1982-10-13 13:00:12 |
+| Lou  |   13 | 2003-06-15 21:00:12 |
++------+------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from Friends;
++------+------+---------------------+
+| Name | age  | DOB                 |
++------+------+---------------------+
+| Eve  |   36 | 1969-10-08 13:00:12 |
+| Rose |   16 | 2000-12-25 12:05:05 |
+| Lou  |   13 | 2003-06-15 21:00:12 |
++------+------+---------------------+
+3 rows in set (0.00 sec)
+
+mysql> notee

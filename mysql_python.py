@@ -1,5 +1,6 @@
 import os
 import pymysql
+import datetime
 
 # Get username from GitPod
 username = os.getenv('C9_USER')
@@ -10,11 +11,13 @@ connection = pymysql.connect(host='localhost',
                             password='',
                             db='Chinook')
 
-try: #RUN QUERY
+try: 
+    # RUN QUERY
     with connection.cursor() as cursor:
-        sql = "SELECT * FROM Artist;" # mysql commands inside python variable
-        cursor.execute(sql) # execute sql variable
-        result = cursor.fetchall() # get data back
-        print(result) # print result
-finally: # CLOSE CONNECTION
+        list_of_names = ['jack', 'mark']
+        format_string = ",".join(['%s']*len(list_of_names))
+        cursor.execute("DELETE FROM Friends WHERE name IN ({});".format(format_string), list_of_names)
+        connection.commit()
+finally: 
+    # CLOSE CONNECTION
     connection.close()
