@@ -47,7 +47,6 @@ def get_record():
     return doc
 
 
-
 def add_record():
     print("")
     first = input("Enter first name > ")
@@ -68,13 +67,22 @@ def add_record():
         print("Error accessing the database")
 
 
+def find_record():
+    record = get_record
+    if record:
+        print("")
+        for k, v in record.items():  # for loop to iterate through the keys and values using items method to step through each individual value in our dictionary.
+            if k != "_id":
+                print(k.capitalize() + ": " + v.capitalize())
+
+
 def main_loop():
     while True:
         option = show_menu()
         if option == "1":
             add_record()
         elif option == "2":
-            print("You have selected option 2")
+            find_record()
         elif option == "3":
             print("You have selected option 3")
         elif option == "4":
