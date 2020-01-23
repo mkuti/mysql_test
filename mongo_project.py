@@ -68,10 +68,10 @@ def add_record():
 
 
 def find_record():
-    record = get_record
-    if record:
+    doc = get_record()
+    if doc:
         print("")
-        for k, v in record.items():  # for loop to iterate through the keys and values using items method to step through each individual value in our dictionary.
+        for k, v in doc.items():
             if k != "_id":
                 print(k.capitalize() + ": " + v.capitalize())
 
