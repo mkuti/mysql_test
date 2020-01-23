@@ -23,9 +23,7 @@ conn = mongo_connect(MONGO_URL)  # calling function with MONGOBDB url
 
 coll = conn[DBS_NAME][COLLECTION_NAME]  # set collection name
 
-new_docs = [{'first': 'janis', 'last': 'joplin', 'occupation': 'singer', 'dob': '12/04/1950', 'hair': 'blond', 'nationality': 'american'}, {'first': 'nina', 'last': 'simone', 'occupation': 'singer', 'dob': '23/07/1948', 'hair': 'black', 'nationality': 'american'}]
-
-coll.insert_many(new_docs)  # add new doc variable in database collection
+coll.update_many({'nationality': 'american'}, {'$set': {'hair_colour': 'pink'}})
 
 documents = coll.find()  # print everything that's in the database = returns MongoDB object
 
