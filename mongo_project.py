@@ -96,18 +96,18 @@ def edit_record():
             print("Error accessing database")
 
 
-def delete_record():
+def delete_record():  # be careful with indent!!!
 
     doc = get_record()  # user choose record in get_record function
 
-    if doc:
+    if doc:  # if record found, automatic error message if no record found
         print("")
-        for k, v in doc.items():
+        for k, v in doc.items():  # interate through and print all values
             if k != "_id":
-                print(k.capitalize() + ": " + v.capitalize())  # show k and v chosen by user
+                print(k.capitalize() + ": " + v.capitalize())  # show all keys and values of doc chosen by user
 
         print("")
-        confirmation = input("Is this the document you want to delete?\nY or N > ")
+        confirmation = input("Is this the document you want to delete?\nY or N > ")  # based on above doc, confirm if ok to delete
         print("")
 
         if confirmation.lower() == "y":
