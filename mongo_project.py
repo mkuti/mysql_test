@@ -86,7 +86,7 @@ def edit_record():
                 update_doc[k] = input(k.capitalize() + "[" + v + "] > ")  # show current value of k
 
                 if update_doc[k] == "":
-                    update_doc[k] == v
+                    update_doc[k] = v
 
         try:
             coll.update_one(doc, {'$set': update_doc})
